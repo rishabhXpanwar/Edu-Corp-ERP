@@ -1,0 +1,238 @@
+.auth-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.auth-layout__sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background-color: var(--school-primary);
+  color: var(--color-white);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  transition: width var(--transition-normal);
+}
+
+.auth-layout__sidebar-logo {
+  padding: var(--space-6) var(--space-4);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-inverse);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.auth-layout__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--school-bg);
+  overflow-x: hidden;
+}
+
+.auth-layout__header {
+  height: 64px;
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-6);
+  gap: var(--space-4);
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.auth-layout__main {
+  flex: 1;
+  padding: var(--space-6);
+  overflow-y: auto;
+}
+
+/* New CSS for sidebar nav and header user profile */
+.auth-layout__nav {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-4) var(--space-3);
+  gap: var(--space-2);
+  flex: 1;
+  overflow-y: auto;
+}
+
+.auth-layout__nav-link,
+.auth-layout__logout-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  border-radius: var(--border-radius-md);
+  transition: all 0.2s ease;
+  font-size: 15px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.auth-layout__nav-link:hover,
+.auth-layout__logout-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.auth-layout__nav-link.active {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-weight: 500;
+}
+
+.auth-layout__sidebar-footer {
+  padding: var(--space-4) var(--space-3);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-left, .header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.header-right {
+  margin-left: auto;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.header-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  color: #9CA3AF;
+}
+
+.header-search input {
+  padding: 8px 12px 8px 36px;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-color);
+  background: #F9FAFB;
+  font-size: 14px;
+  outline: none;
+  width: 250px;
+  transition: all 0.2s;
+}
+
+.header-search input:focus {
+  background: white;
+  border-color: var(--school-primary);
+  box-shadow: 0 0 0 2px rgba(11, 154, 219, 0.1);
+}
+
+.header-icon-btn {
+  position: relative;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  border-radius: 50%;
+}
+
+.header-icon-btn:hover {
+  background: #F3F4F6;
+}
+
+.notification-badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: var(--danger);
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  height: 16px;
+  min-width: 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
+
+.header-user {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  cursor: pointer;
+  padding-left: var(--space-4);
+  border-left: 1px solid var(--border-color);
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.user-role {
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-transform: capitalize;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--school-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-initials {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .auth-layout__sidebar {
+    position: fixed;
+    z-index: 50;
+    transform: translateX(-100%);
+  }
+  .mobile-menu-btn {
+    display: block;
+  }
+  .header-search {
+    display: none;
+  }
+}

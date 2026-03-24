@@ -1,0 +1,79 @@
+.post-announcement-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.post-announcement-modal__error {
+  border: 1px solid var(--danger-border);
+  background: var(--danger-bg);
+  color: var(--danger);
+  border-radius: var(--border-radius-md);
+  font-size: 0.875rem;
+  padding: 0.65rem 0.8rem;
+}
+
+.post-announcement-modal__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.post-announcement-modal__field label {
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.post-announcement-modal__field input,
+.post-announcement-modal__field select,
+.post-announcement-modal__field textarea {
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  padding: 0.625rem 0.75rem;
+}
+
+.post-announcement-modal__field textarea {
+  resize: vertical;
+}
+
+.post-announcement-modal__field input:focus,
+.post-announcement-modal__field select:focus,
+.post-announcement-modal__field textarea:focus {
+  border-color: var(--school-primary);
+  outline: none;
+}
+
+.post-announcement-modal__field-error {
+  color: var(--danger);
+  font-size: 0.75rem;
+}
+
+.post-announcement-modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
+
+.post-announcement-modal__actions .btn {
+  border-radius: var(--border-radius-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.52rem 0.9rem;
+}
+
+.post-announcement-modal__actions .btn-secondary {
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+.post-announcement-modal__actions .btn-primary {
+  border: 1px solid var(--school-primary);
+  background: var(--school-primary);
+  color: var(--color-white);
+}

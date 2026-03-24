@@ -1,0 +1,120 @@
+.compose-notification {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 1rem;
+}
+
+.compose-notification__title {
+  margin: 0 0 0.875rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.compose-notification__type-toggle {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.compose-notification__type-btn {
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.375rem 0.875rem;
+  transition: all var(--transition-fast, 150ms ease-in-out);
+}
+
+.compose-notification__type-btn.is-active {
+  background: var(--school-primary);
+  border-color: var(--school-primary);
+  color: var(--color-white);
+}
+
+.compose-notification__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.compose-notification__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.compose-notification__field label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.compose-notification__field input,
+.compose-notification__field textarea {
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  padding: 0.625rem 0.75rem;
+}
+
+.compose-notification__field textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+.compose-notification__field input:focus,
+.compose-notification__field textarea:focus {
+  border-color: var(--school-primary);
+  outline: none;
+}
+
+.compose-notification__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.compose-notification__counter {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.compose-notification__error {
+  font-size: 0.75rem;
+  color: var(--danger);
+}
+
+.compose-notification__actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.compose-notification__actions .btn {
+  border: 1px solid var(--school-primary);
+  border-radius: var(--border-radius-md);
+  background: var(--school-primary);
+  color: var(--color-white);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.55rem 0.9rem;
+}
+
+.compose-notification__actions .btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .compose-notification__actions .btn {
+    width: 100%;
+  }
+}

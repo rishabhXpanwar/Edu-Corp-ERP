@@ -1,0 +1,48 @@
+.sa-subscriptions-page {
+  padding: 1rem 0;
+}
+
+.sa-filters {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sa-filter-select {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  background-color: white;
+  font-family: var(--font-family);
+  font-size: 0.9rem;
+}
+
+.sa-table-container {
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.plan-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: var(--bg-color);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.sa-btn-link {
+  color: var(--sa-primary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.sa-btn-link:hover {
+  text-decoration: underline;
+}

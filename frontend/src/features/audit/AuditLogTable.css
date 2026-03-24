@@ -1,0 +1,111 @@
+.audit-log-table {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.audit-log-table__filters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.audit-log-table__input {
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+  padding: var(--space-2) var(--space-3);
+}
+
+.audit-log-table__input:focus {
+  border-color: var(--school-primary);
+  outline: none;
+}
+
+.audit-log-table__date-range {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.audit-log-table__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}
+
+.audit-log-table__btn {
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  padding: var(--space-2) var(--space-3);
+}
+
+.audit-log-table__btn--primary {
+  background: var(--school-primary);
+  color: var(--color-white);
+}
+
+.audit-log-table__btn--ghost {
+  border-color: var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+.audit-log-table .data-table__th,
+.audit-log-table .data-table__td {
+  padding: 8px 12px;
+}
+
+.audit-log-table__time {
+  color: var(--text-secondary);
+  font-size: var(--font-size-xs);
+}
+
+.audit-log-table__actor {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.audit-log-table__actor-name {
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.audit-log-table__action {
+  font-family: 'Courier New', monospace;
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+}
+
+.audit-log-table__target-id {
+  color: var(--text-secondary);
+  font-family: 'Courier New', monospace;
+  font-size: var(--font-size-xs);
+}
+
+@media (max-width: 1024px) {
+  .audit-log-table__filters {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .audit-log-table__date-range {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .audit-log-table__actions {
+    justify-content: stretch;
+  }
+
+  .audit-log-table__btn {
+    flex: 1;
+  }
+}

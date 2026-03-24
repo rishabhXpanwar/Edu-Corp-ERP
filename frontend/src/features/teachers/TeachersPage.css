@@ -1,0 +1,45 @@
+.teachers-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+}
+
+.teachers-page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.teachers-page__header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border-color);
+}
+
+.clickable-row {
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.clickable-row:hover {
+  background: #f8fafc;
+}
+
+.badge-success {
+  background: var(--success-color, #22C55E);
+  color: white;
+}
+
+.badge-danger {
+  background: var(--danger-color, #EF4444);
+  color: white;
+}

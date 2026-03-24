@@ -1,0 +1,32 @@
+.salary-status-select {
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.salary-status-select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.salary-status--paid {
+  border-color: var(--success);
+  color: var(--success);
+}
+
+.salary-status--unpaid {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.salary-status--delayed {
+  border-color: var(--warning);
+  color: var(--warning-dark);
+}

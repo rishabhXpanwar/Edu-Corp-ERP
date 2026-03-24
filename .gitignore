@@ -1,0 +1,25 @@
+node_modules
+dist
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+
+# Project Documentation & Agent Coordination
+.docs/
+AGENTS.md
+DEPLOYMENT.md
+ERROR_LOG.md
+PROJECT-BRAIN.md
+ROADMAP.md
+TASK-ROUTER.md
+
+# Logs (explicit)
+backend-dev.log
+frontend-dev.log
+
+# Temporary Assets
+timetable-modal-fix-test.png
+timetable-modal-issue.png
+timetable-modal-working.png

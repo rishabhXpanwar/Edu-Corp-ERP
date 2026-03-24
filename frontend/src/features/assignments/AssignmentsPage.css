@@ -1,0 +1,231 @@
+/* Assignments CSS */
+:root {
+  --assignment-primary: var(--school-primary, #0B9ADB);
+  --assignment-bg: var(--school-bg, #EAF5FF);
+}
+
+.assignments-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.assignments-page__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: var(--border-radius-md, 8px);
+  border: 1px solid #e5e7eb;
+  align-items: flex-end;
+}
+
+.assignments-page__filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 150px;
+}
+
+.assignments-page__filter-group label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.assignments-page__select {
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-family: var(--font-family, 'Inter', sans-serif);
+  font-size: 0.875rem;
+  background-color: white;
+  width: 100%;
+}
+
+.assignments-page__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Assignment Card */
+.assignment-card {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--border-radius-md, 8px);
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.assignment-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.assignment-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.assignment-card__title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary, #1A1D23);
+  line-height: 1.4;
+}
+
+.assignment-card__delete-btn {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.assignment-card__delete-btn:hover {
+  color: var(--danger, #EF4444);
+}
+
+.assignment-card__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.assignment-card__subject {
+  font-weight: 500;
+  color: var(--assignment-primary);
+  background-color: var(--assignment-bg);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.assignment-card__due-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.assignment-card__due-badge--upcoming {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.assignment-card__due-badge--overdue {
+  background-color: #fee2e2;
+  color: var(--danger, #EF4444);
+}
+
+.assignment-card__desc {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #4b5563;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.assignment-card__attachments {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid #f3f4f6;
+}
+
+.assignment-card__attachments-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.5rem 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.assignment-card__attachments-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.assignment-card__attachment-item {
+  font-size: 0.875rem;
+}
+
+.assignment-card__attachment-link {
+  color: var(--assignment-primary);
+  text-decoration: none;
+}
+
+.assignment-card__attachment-link:hover {
+  text-decoration: underline;
+}
+
+/* Modal form specific overrides */
+.assignment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.assignment-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.assignment-form__label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.assignment-form__input,
+.assignment-form__select,
+.assignment-form__textarea {
+  padding: 0.625rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-family: var(--font-family, 'Inter', sans-serif);
+  font-size: 0.875rem;
+}
+
+.assignment-form__input:focus,
+.assignment-form__select:focus,
+.assignment-form__textarea:focus {
+  outline: none;
+  border-color: var(--assignment-primary);
+  box-shadow: 0 0 0 1px var(--assignment-primary);
+}
+
+.assignment-form__textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.assignment-form__error {
+  font-size: 0.75rem;
+  color: var(--danger, #EF4444);
+}

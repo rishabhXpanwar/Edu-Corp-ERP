@@ -1,0 +1,68 @@
+.notifications-page {
+  --notification-unread-bg: var(--school-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.notifications-page__loading {
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notifications-page__error {
+  border: 1px solid var(--danger-border);
+  background: var(--danger-bg);
+  color: var(--danger);
+  border-radius: var(--border-radius-md);
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+}
+
+.notifications-page__sender-view {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.notifications-page__history {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 0.75rem;
+}
+
+.notif-type-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 78px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.625rem;
+  text-transform: capitalize;
+}
+
+.notif-type-badge--individual {
+  color: var(--school-primary);
+  background: var(--info-bg);
+}
+
+.notif-type-badge--section {
+  color: var(--warning);
+  background: var(--warning-bg);
+}
+
+.notif-type-badge--class {
+  color: var(--success);
+  background: var(--success-bg);
+}
+
+.notifications-page__page-note {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-align: right;
+}

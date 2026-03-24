@@ -1,0 +1,40 @@
+.settings-page {
+  width: 100%;
+}
+
+.school-panel {
+  --school-primary: var(--school-brand-primary);
+  --school-bg: var(--school-brand-bg);
+}
+
+.settings-page__content {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.settings-page__loader {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settings-page__error {
+  max-width: 700px;
+  margin: 0 auto var(--space-4);
+  border: 1px solid var(--danger-border);
+  color: var(--danger);
+  background-color: var(--danger-bg);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-sm);
+}
+
+@media (max-width: 768px) {
+  .settings-page__content {
+    max-width: 100%;
+  }
+}

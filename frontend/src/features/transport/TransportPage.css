@@ -1,0 +1,65 @@
+.transport-page {
+  padding: 1.5rem;
+}
+
+.transport-page__loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+.transport-page__error {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--danger);
+  padding: 1rem;
+  border-radius: var(--border-radius-md);
+  margin-bottom: 1rem;
+}
+
+.transport-page__content {
+  margin-top: 1.5rem;
+}
+
+.transport-page__grid-container {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.transport-page__grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.transport-page__student-view {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.transport-page__student-view .route-card {
+  max-width: 400px;
+}
+
+@media (max-width: 768px) {
+  .transport-page {
+    padding: 1rem;
+  }
+
+  .transport-page__grid-container {
+    flex-direction: column;
+  }
+
+  .transport-page__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .transport-page__student-view {
+    flex-direction: column;
+  }
+
+  .transport-page__student-view .route-card {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,67 @@
+.students-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+}
+
+.students-page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.students-page__header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+}
+
+.student-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border-color);
+}
+
+.clickable-row {
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.clickable-row:hover {
+  background: #f8fafc;
+}
+
+.filters-panel {
+  display: flex;
+  gap: 16px;
+  background: var(--bg-surface);
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  flex-wrap: wrap;
+}
+
+.filters-panel .form-group {
+  min-width: 200px;
+  flex: 1;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th, .data-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.data-table th {
+  background: #f1f5f9;
+  font-weight: 600;
+  color: #475569;
+}

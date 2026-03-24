@@ -1,0 +1,35 @@
+.audit-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.audit-page__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-4);
+}
+
+.audit-page__loading {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 240px;
+}
+
+.audit-page__error {
+  border: 1px solid var(--danger-border);
+  border-radius: var(--radius-md);
+  background: var(--danger-bg);
+  color: var(--danger);
+  font-size: var(--font-size-sm);
+  padding: var(--space-3);
+}

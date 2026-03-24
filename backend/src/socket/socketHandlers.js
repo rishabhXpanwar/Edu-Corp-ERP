@@ -1,0 +1,1 @@
+// Socket event handlers — feature-specific handlers added per component

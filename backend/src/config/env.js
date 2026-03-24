@@ -1,0 +1,23 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
+const requiredEnvVars = [
+  'PORT', 'MONGO_URI', 'JWT_ACCESS_SECRET', 'JWT_REFRESH_SECRET', 'CLIENT_URL', 'NODE_ENV',
+  'CLOUDINARY_CLOUD_NAME', 'CLOUDINARY_API_KEY', 'CLOUDINARY_API_SECRET',
+  'TWILIO_ACCOUNT_SID', 'TWILIO_AUTH_TOKEN', 'TWILIO_PHONE_NUMBER',
+  'NODEMAILER_HOST', 'NODEMAILER_PORT', 'NODEMAILER_USER', 'NODEMAILER_PASS'
+];
+
+const missingList = requiredEnvVars.filter((envVar) => !process.env[envVar]);
+
+if (missingList.length > 0) {
+  console.error('[Config] Missing env vars:', missingList);
+  process.exit(1);
+}
+
+export const {
+  PORT, MONGO_URI, JWT_ACCESS_SECRET, JWT_REFRESH_SECRET, CLIENT_URL, NODE_ENV,
+  CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET,
+  TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, TWILIO_PHONE_NUMBER,
+  NODEMAILER_HOST, NODEMAILER_PORT, NODEMAILER_USER, NODEMAILER_PASS
+} = process.env;

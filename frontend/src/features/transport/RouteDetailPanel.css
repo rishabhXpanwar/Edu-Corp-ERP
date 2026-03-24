@@ -1,0 +1,211 @@
+.route-detail-panel {
+  background-color: var(--white, #fff);
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  min-width: 350px;
+  max-width: 400px;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+
+.route-detail-panel__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color, #e5e7eb);
+}
+
+.route-detail-panel__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.route-detail-panel__close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  color: var(--text-muted, #9ca3af);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.route-detail-panel__close:hover {
+  color: var(--text-primary);
+  background-color: var(--bg-hover, #f3f4f6);
+}
+
+.route-detail-panel__info {
+  margin-bottom: 1.5rem;
+}
+
+.route-detail-panel__info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed var(--border-color, #e5e7eb);
+}
+
+.route-detail-panel__label {
+  font-size: 0.875rem;
+  color: var(--text-secondary, #6b7280);
+}
+
+.route-detail-panel__value {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.route-detail-panel__section {
+  margin-bottom: 1.5rem;
+}
+
+.route-detail-panel__section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.route-detail-panel__section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.75rem 0;
+}
+
+.route-detail-panel__section-header .route-detail-panel__section-title {
+  margin: 0;
+}
+
+.route-detail-panel__stops-list,
+.route-detail-panel__students-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.route-detail-panel__stop-item {
+  padding: 0.75rem;
+  background-color: var(--bg-light, #f9fafb);
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.route-detail-panel__stop-name {
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.route-detail-panel__stop-times {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary, #6b7280);
+}
+
+.route-detail-panel__stop-time,
+.route-detail-panel__stop-fee {
+  display: inline-flex;
+  align-items: center;
+}
+
+.route-detail-panel__stop-fee {
+  color: var(--success);
+  font-weight: 500;
+}
+
+.route-detail-panel__student-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: var(--bg-light, #f9fafb);
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.route-detail-panel__student-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.route-detail-panel__student-name {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.route-detail-panel__student-email {
+  font-size: 0.75rem;
+  color: var(--text-secondary, #6b7280);
+}
+
+.route-detail-panel__empty {
+  font-size: 0.875rem;
+  color: var(--text-muted, #9ca3af);
+  font-style: italic;
+  padding: 0.5rem 0;
+  margin: 0;
+}
+
+.route-detail-panel__actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color, #e5e7eb);
+}
+
+.route-detail-panel__modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.route-detail-panel__modal {
+  background-color: var(--white, #fff);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  min-width: 320px;
+  max-width: 400px;
+}
+
+.route-detail-panel__modal-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+}
+
+.route-detail-panel__modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .route-detail-panel {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,76 @@
+.salaries-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.salaries-month-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  padding: var(--space-3);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.salaries-month-nav__arrow {
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  background: var(--bg-primary);
+  transition: color var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.salaries-month-nav__arrow:hover {
+  color: var(--school-primary);
+  border-color: var(--school-primary);
+  background: var(--info-bg);
+}
+
+.salaries-month-nav__label {
+  min-width: 12rem;
+  text-align: center;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+}
+
+.salary-teacher-cell {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.salary-teacher-cell__name {
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+}
+
+.salary-teacher-cell__role {
+  color: var(--text-secondary);
+  font-size: var(--font-size-xs);
+  text-transform: capitalize;
+}
+
+.salaries-pagination {
+  padding: var(--space-2) 0;
+}
+
+@media (max-width: 768px) {
+  .salaries-month-nav {
+    justify-content: space-between;
+  }
+
+  .salaries-month-nav__label {
+    min-width: auto;
+    font-size: var(--font-size-md);
+  }
+}

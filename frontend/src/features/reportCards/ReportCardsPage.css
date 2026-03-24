@@ -1,0 +1,100 @@
+.report-cards-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.report-cards-filter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--surface-bg, #fff);
+  padding: 1rem 1.5rem;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.report-cards-filter label {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.report-cards-filter select {
+  max-width: 300px;
+}
+
+.report-cards-content {
+  background: var(--surface-bg, #fff);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  min-height: 200px;
+}
+
+.exam-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+.exam-report-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  background-color: var(--background-light);
+  transition: all 0.2s ease-in-out;
+}
+
+.exam-report-card:hover {
+  box-shadow: var(--shadow-sm);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.exam-report-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.exam-report-card__info h3 {
+  margin: 0;
+  font-size: 1.125rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.exam-report-card__info p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.exam-report-card__actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.exam-report-card__actions .btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .exam-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,102 @@
+.announcement-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-left: 3px solid var(--school-primary);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 0.9rem 1rem;
+}
+
+.announcement-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.announcement-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.announcement-card__audience {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 62px;
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.announcement-card__audience--all {
+  color: var(--school-primary);
+  background: var(--info-bg);
+}
+
+.announcement-card__audience--staff {
+  color: var(--warning);
+  background: var(--warning-bg);
+}
+
+.announcement-card__audience--students {
+  color: var(--success);
+  background: var(--success-bg);
+}
+
+.announcement-card__author,
+.announcement-card__time {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.announcement-card__delete-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  background: var(--bg-secondary);
+  color: var(--danger);
+  padding: 0.35rem;
+}
+
+.announcement-card__delete-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.announcement-card__title {
+  margin: 0.6rem 0 0.35rem;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.announcement-card__body-wrap {
+  overflow: hidden;
+}
+
+.announcement-card__body {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+
+.announcement-card__toggle-btn {
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--school-primary);
+}
+
+@media (max-width: 768px) {
+  .announcement-card__header {
+    align-items: flex-start;
+  }
+}

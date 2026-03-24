@@ -1,0 +1,132 @@
+.fees-page {
+  animation: fadeIn 0.3s ease;
+}
+
+.fees-stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.fees-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.fees-filter-tabs {
+  display: flex;
+  gap: 1rem;
+}
+
+.fees-search {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.fees-search-select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  outline: none;
+  background-color: var(--bg-primary);
+  color: var(--text-color);
+  transition: border-color 0.2s ease;
+}
+
+.fees-search-select:focus {
+  border-color: var(--primary-color);
+}
+
+.fees-search-select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: var(--bg-secondary);
+}
+
+.fees-search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.fees-search-icon {
+  position: absolute;
+  left: 0.75rem;
+  color: var(--text-color-muted);
+}
+
+.fees-search-input {
+  padding: 0.5rem 0.75rem 0.5rem 2.25rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+  width: 250px;
+}
+
+.fees-search-input:focus {
+  border-color: var(--primary-color);
+}
+
+.fee-tab {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-color-muted);
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.fee-tab:hover {
+  color: var(--primary-color);
+}
+
+.fee-tab.active {
+  color: var(--primary-color);
+}
+
+.fee-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+  border-radius: 2px 2px 0 0;
+}
+
+.student-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.student-name {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.student-admission {
+  font-size: 0.8rem;
+  color: var(--text-color-muted);
+}
+
+@media (max-width: 768px) {
+  .fees-stats-container {
+    grid-template-columns: 1fr;
+  }
+}

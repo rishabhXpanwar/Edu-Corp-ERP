@@ -1,0 +1,26 @@
+.event-badge {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  border-radius: 999px;
+  padding: 0.15rem 0.45rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-white);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.event-badge--holiday {
+  background: var(--danger);
+}
+
+.event-badge--exam {
+  background: var(--school-primary);
+}
+
+.event-badge--event {
+  background: var(--success);
+}

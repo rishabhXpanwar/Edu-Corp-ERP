@@ -1,0 +1,149 @@
+.timetable-page {
+  padding: 24px;
+}
+
+.timetable-header-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.timetable-select {
+  padding: 8px 12px;
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: var(--border-radius-md, 8px);
+  background-color: white;
+  min-width: 150px;
+}
+
+.timetable-grid-container {
+  background: white;
+  border-radius: var(--border-radius-md, 8px);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.timetable-grid-scroll {
+  overflow-x: auto;
+}
+
+.timetable-grid {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.timetable-grid th,
+.timetable-grid td {
+  border: 1px solid var(--border-color, #e2e8f0);
+  padding: 12px;
+  text-align: center;
+}
+
+.timetable-grid th {
+  background-color: var(--school-primary, #0B9ADB);
+  color: white;
+  font-weight: 500;
+}
+
+.timetable-day-col {
+  width: 100px;
+  background-color: var(--school-bg, #EAF5FF) !important;
+  color: var(--text-primary, #1A1D23) !important;
+  font-weight: 600 !important;
+}
+
+.timetable-day-name {
+  font-weight: 600;
+  background-color: var(--school-bg, #EAF5FF);
+}
+
+.timetable-cell {
+  position: relative;
+  height: 80px;
+  min-width: 120px;
+  vertical-align: top;
+}
+
+.timetable-cell:hover .btn-edit-slot {
+  opacity: 1;
+}
+
+.has-period {
+  background-color: #f8fafc;
+}
+
+.period-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
+  padding-right: 28px;
+}
+
+.period-subject {
+  font-weight: 600;
+  color: var(--text-primary, #1A1D23);
+}
+
+.period-time, .period-teacher {
+  color: #64748b;
+  font-size: 0.8rem;
+}
+
+.period-unassigned {
+  color: #cbd5e1;
+}
+
+.btn-edit-slot {
+  display: flex;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: white;
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #64748b;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  opacity: 0.6;
+  z-index: 10;
+  transition: opacity 0.2s ease;
+}
+
+.btn-edit-slot:hover {
+  background: #f1f5f9;
+  color: var(--school-primary, #0B9ADB);
+}
+
+.timetable-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.timetable-edit-form .form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.timetable-edit-form .form-row .form-group {
+  flex: 1;
+}
+
+.timetable-modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.actions-right {
+  display: flex;
+  gap: 12px;
+}

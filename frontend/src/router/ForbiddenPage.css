@@ -1,0 +1,16 @@
+.forbidden-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: var(--space-4);
+}
+.forbidden-page__code {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--danger);
+}
+.forbidden-page__message {
+  color: var(--text-secondary);
+}
