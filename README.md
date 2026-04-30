@@ -2,7 +2,7 @@
 
 > A comprehensive **Educational Resource Planning (ERP) System** designed for modern schools — managing academics, administration, finance, HR, communication, and more in one unified platform.
 
-🌐 **Live Demo**: [https://black-smoke-035ba8700.6.azurestaticapps.net](https://black-smoke-035ba8700.6.azurestaticapps.net)
+🌐 **Live Demo**: [https://edu-corp-erp.vercel.app](https://edu-corp-erp.vercel.app/)
 
 ---
 
@@ -42,7 +42,7 @@ Edu-Corp ERP is a **full-stack, multi-tenant school management system** that pro
 
 | Field | Value |
 |-------|-------|
-| **Live URL** | [https://black-smoke-035ba8700.6.azurestaticapps.net](https://black-smoke-035ba8700.6.azurestaticapps.net) |
+| **Live URL** | [https://edu-corp-erp.vercel.app](https://edu-corp-erp.vercel.app/) |
 | **Role** | Principal |
 | **Email** | `principal@springfield.test` |
 | **Password** | `Password123!` |
