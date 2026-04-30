@@ -9,7 +9,21 @@ import { globalErrorHandler } from './middleware/globalErrorHandler.js';
 const app = express();
 
 // Apply middleware IN THIS ORDER:
-app.use(cors({ origin: CLIENT_URL, credentials: true }));
+const allowedOrigins = CLIENT_URL.split(',').map(url => url.trim());
+app.use(cors({
+  origin: (origin, callback) => {
+    // Allow requests with no origin (like Postman or server-to-server)
+    if (!origin) return callback(null, true);
+    
+    // Allow origin if it's in the allowed list or is a Vercel preview deployment
+    if (allowedOrigins.includes(origin) || origin.endsWith('.vercel.app') || origin.startsWith('http://localhost:')) {
+      return callback(null, true);
+    }
+    
+    callback(new Error('Not allowed by CORS'));
+  },
+  credentials: true
+}));
 app.use(helmet());
 app.use(morgan('dev'));
 app.use(express.json());
