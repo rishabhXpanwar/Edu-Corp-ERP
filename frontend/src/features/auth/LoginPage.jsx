@@ -84,6 +84,17 @@ const LoginPage = () => {
           <p>Login to your account to continue</p>
         </div>
 
+        <div className="demo-notice">
+          <p className="demo-creds">
+            <strong>Demo Access:</strong><br />
+            Email: principal@springfield.test<br />
+            Password: Password123!
+          </p>
+          <p className="render-notice">
+            * The project is deployed on Render, so the backend may take a few seconds to wake up on the first request.
+          </p>
+        </div>
+
         <div className="login-tabs">
           <button 
             type="button" 
